@@ -3,9 +3,20 @@
   display: block;
   border: 1px solid red;
 }
-
-button {
-  margin: 0 auto;
+.center {
+  margin: auto;
   display: block;
-  margin-top: 10px;
+}
+.flex {
+  display: flex;
+}
+.size-container {
+  margin: 10px 0 0 10px;
+  text-align: right;
+}
+.button-container {
+  margin: 10px 0 0 10px;
+}
+.flex-item {
+  width: 50%;
 }
