@@ -7,9 +7,6 @@ let canvas: HTMLCanvasElement = document.getElementById(
   'canvas'
 ) as HTMLCanvasElement;
 
-let clearButton = document.getElementById('clear');
-let $clearClicked = fromEvent(clearButton, 'click');
-
 let context = canvas.getContext('2d');
 let cRect = canvas.getBoundingClientRect();
 let offsetX = cRect.left;
@@ -42,6 +39,9 @@ $mouseDown
     context.stroke();
     context.closePath();
   });
+
+let clearButton = document.getElementById('clear');
+let $clearClicked = fromEvent(clearButton, 'click');
 
 $clearClicked.subscribe(() =>
   context.clearRect(0, 0, canvas.width, canvas.height)
